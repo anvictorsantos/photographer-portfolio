@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 
 export const Navbar = () => {
   const [nav, setNav] = useState(false)
@@ -26,16 +26,16 @@ export const Navbar = () => {
 
   return (
     <div
-      style={{ backgroundColor: `${color}` }}
       className="fixed left-0 top-0 z-10 w-full duration-300 ease-in"
+      style={{ backgroundColor: `${color}` }}
     >
       <div className="m-auto flex max-w-[1240px] items-center justify-between p-4 text-white">
         <Link href="/">
-          <h1 style={{ color: `${textColor}` }} className="text-4xl font-bold">
+          <h1 className="text-4xl font-bold" style={{ color: `${textColor}` }}>
             Captur
           </h1>
         </Link>
-        <ul style={{ color: `${textColor}` }} className="hidden gap-4 sm:flex">
+        <ul className="hidden gap-4 sm:flex" style={{ color: `${textColor}` }}>
           <li>
             <Link href="/">Home</Link>
           </li>
@@ -50,7 +50,7 @@ export const Navbar = () => {
           </li>
         </ul>
         {/* Movbile Button */}
-        <div onClick={handleNav} className="z-10 block sm:hidden">
+        <div className="z-10 block sm:hidden" onClick={handleNav}>
           {nav ? (
             <AiOutlineClose size={20} style={{ color: `${textColor}` }} />
           ) : (
@@ -67,26 +67,26 @@ export const Navbar = () => {
         >
           <ul>
             <li
-              onClick={handleNav}
               className="p-4 text-4xl hover:text-gray-500"
+              onClick={handleNav}
             >
               <Link href="/">Home</Link>
             </li>
             <li
-              onClick={handleNav}
               className="p-4 text-4xl hover:text-gray-500"
+              onClick={handleNav}
             >
               <Link href="/#gallery">Gallery</Link>
             </li>
             <li
-              onClick={handleNav}
               className="p-4 text-4xl hover:text-gray-500"
+              onClick={handleNav}
             >
               <Link href="/portfolio">Work</Link>
             </li>
             <li
-              onClick={handleNav}
               className="p-4 text-4xl hover:text-gray-500"
+              onClick={handleNav}
             >
               <Link href="/contact">Contact</Link>
             </li>
